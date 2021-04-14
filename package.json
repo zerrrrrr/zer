@@ -1,0 +1,19 @@
+{
+  "name": "zer",
+  "version": "0.0.1",
+  "description": "Zer world.",
+  "main": "lib/index.js",
+  "bin": {
+    "zer": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "author": "arius@qq.com",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  }
+}
