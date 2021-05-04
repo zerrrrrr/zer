@@ -1,22 +1,23 @@
 {
-    "compilerOptions": {
-        "outDir": "lib",
-        "target": "ESNext",
-        "module": "CommonJS",
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "downlevelIteration": true,
-        "allowSyntheticDefaultImports": true,
-        "importHelpers": true,
-        "skipLibCheck": true,
-        "sourceMap": true,
-        "removeComments": true,
-        "noEmitOnError": true,
-        "strict": false,
-        "alwaysStrict": false,
-        "noImplicitAny": false,
-        "typeRoots": ["node_modules/@types/"]
-    },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "outDir": "lib",
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types", "src/typings"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
