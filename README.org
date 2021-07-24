@@ -1,0 +1,8 @@
+#+STARTUP: content
+* Zer 🪐
+  A command line tool for coding.
+** Usage
+   #+begin_src shell
+     npm install -g @zerrrrrr/zer
+     zer c -r nts new-project
+   #+end_src

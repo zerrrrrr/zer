@@ -1,4 +1,6 @@
-interface CommandInfo {
+type ActionArgs<T> = [Record<string, unknown>, Partial<T>]
+
+interface CommandInfo<T> {
   /** 命令名称 */
   name: string
   /** 命令描述 */
@@ -13,5 +15,7 @@ interface CommandInfo {
     description: string
   }[]
   /** 命令处理函数 */
-  action: (option: any) => any
+  action: (...args: ActionArgs<T>) => any
+  /** 参数 */
+  args?: string[]
 }

@@ -51,7 +51,7 @@ class CreateCommand extends BaseCommand<CreateCommandParams> {
       filePath: dirName,
       output: this.options.name,
       excludes: [/\.git/g],
-      replaceTpl: e => e.split('$ZER_NAME').join(projectName),
+      replaceTpl: (e) => e.split('$ZER_NAME').join(projectName),
     })
 
     if (isFile(`${this.options.name}/${initShell}`)) {
@@ -64,7 +64,7 @@ class CreateCommand extends BaseCommand<CreateCommandParams> {
   }
 }
 
-const command: CommandInfo = {
+const command: CommandInfo<CreateCommandParams> = {
   name: commandName,
   shortcut: 'c',
   description: 'create repository from template.',
@@ -78,9 +78,10 @@ const command: CommandInfo = {
       description: `Project name.`,
     },
   ],
-  action: (options: Partial<CreateCommandParams>) => {
+  args: ['name'],
+  action: (args, options) => {
     const command = new CreateCommand(commandName)
-    return command.handler(options)
+    return command.handler({ ...options, name: args?.name ?? options.name })
   },
 }
 

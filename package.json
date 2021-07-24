@@ -1,12 +1,17 @@
 {
   "name": "@zerrrrrr/zer",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Zer world.",
   "main": "lib/index.js",
   "bin": {
     "zer": "./bin/cli.js"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "scripts": {
+    "emoji": "gitmoji-commit-hook --init",
     "clean": "rm -r lib 2> /dev/null",
     "dev": "ts-node --files src/cli.ts",
     "build": "npm run clean && rollup -c"
@@ -31,6 +36,7 @@
     "@types/figlet": "^1.5.1",
     "@types/mkdirp": "^1.0.1",
     "@types/node": "^14.14.41",
+    "@zerrrrrr/gitmoji-commit-hook": "^3.0.3",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
